@@ -1,0 +1,9 @@
+node_modules/
+.env
+dist/
+# Personal voice files. Only the .example.md templates are tracked.
+voice/profile.md
+voice/samples.md
+voice/candidates-chat.md
+voice/inbox/
+.superpowers/

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>reply-bot</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <div class="top">
+      <div class="modes" role="radiogroup" aria-label="mode">
+        <label><input type="radio" name="mode" value="reply" checked> reply</label>
+        <label><input type="radio" name="mode" value="post"> post</label>
+      </div>
+      <input id="context" type="text" placeholder="who's this to, what thread" autocomplete="off">
+    </div>
+    <div class="panes">
+      <section>
+        <textarea id="draft" placeholder="paste your draft" spellcheck="false"></textarea>
+        <div class="row">
+          <button id="go" disabled>Rewrite</button>
+          <span class="hint">Ctrl+Enter</span>
+        </div>
+      </section>
+      <section>
+        <div id="result" class="result" aria-live="polite"></div>
+        <div class="row">
+          <button id="copy" disabled>Copy</button>
+          <span id="status" class="status"></span>
+        </div>
+      </section>
+    </div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
